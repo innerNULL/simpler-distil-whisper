@@ -1,6 +1,6 @@
 # Simpler Distil-Whisper
 Migrated from [whisper_and_distil_whisper](https://github.com/innerNULL/mia/tree/main/bin/model/whisper_and_distil_whisper) 
-and [asr evaluation](https://github.com/innerNULL/mia/tree/main/bin/evaluation/asr)
+and [asr evaluation](https://github.com/innerNULL/mia/tree/main/bin/evaluation/asr) on 2024-05-30.
 
 
 ## Distil-Whisper
@@ -58,6 +58,12 @@ All audio datasets are just a JSON lines file.
 * JSON lines audio training & dev & test dataset.
 * Build Python environment:
 ```shell
+conda create -p ./_venv python=3.10
+conda activate ./_venv
+conda deactivate
+
+# or 
+
 python3 -m venv ./_venv --copies
 source ./bin/activate
 python -m pip install ./
