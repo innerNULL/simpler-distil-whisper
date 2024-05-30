@@ -1,0 +1,12 @@
+{
+  "model": "openai/whisper-small",
+  "processor": "openai/whisper-small",
+  "data_path": "./demo_data/demo_jsonl_dataset.jsonl",
+  "lang": "mandarin", 
+  "device": "cuda:2", 
+  "max_sample_size": 100000000,
+  "output_path": "pseudo_labeled_dataset.jsonl", 
+  "target_text_col": "text",
+  "metric_col": "cer/wer", 
+  "metric_to_use": "cer"
+}

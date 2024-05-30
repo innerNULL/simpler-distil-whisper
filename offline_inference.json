@@ -1,0 +1,13 @@
+{
+  "model": "./_distil_whisper/final",
+  "processor": "openai/whisper-small",
+  "data_path": "./demo_data/demo_jsonl_dataset.jsonl",
+  "lang": "mandarin", 
+  "device": "cuda:2", 
+  "max_sample_size": 1000,
+  "audio_path_col": "path", 
+  "output_text_col": "output_text",
+  "output_path": "./_distil_whisper_offline_inference_results.jsonl", 
+  "groundtruth_col": "text",
+  "use_hf_pipeline": true
+}

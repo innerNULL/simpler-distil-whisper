@@ -1,0 +1,7 @@
+{
+  "asr_results_path": "./_distil_whisper_offline_inference_results.jsonl",
+  "target_col": "text",
+  "output_col": "output_text", 
+  "lang": "zh-tw",
+  "text_norm": false
+}

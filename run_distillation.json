@@ -1,0 +1,34 @@
+{
+  "model": {
+    "teacher_model_path_or_name": "openai/whisper-small",
+    "student_model_path": "_student_whisper",
+    "processor_path_or_name": "openai/whisper-small",
+    "distil_model_path": "_distil_whisper"
+  },
+  "data": {
+    "train_jsonl_path": "pseudo_labeled_dataset.jsonl",
+    "dev_jsonl_path": "./demo_data/demo_jsonl_dataset.jsonl",
+    "test_jsonl_path": "./demo_data/demo_jsonl_dataset.jsonl",
+    "audio_duration_col": "input_length",
+    "audio_path_col": "path", 
+    "text_col": "text", 
+    "metric_col": "cer/wer",
+    "min_audio_duration": 0,
+    "max_audio_duration": 30, 
+    "min_token_num": 0,
+    "max_token_num": 448,
+    "min_pseudo_label_metric": 0.2
+  },
+  "train": {
+    "epochs": 10,
+    "batch_size": 16,
+    "learning_rate": 0.00001,
+    "teacher_model_device": "cuda:0",
+    "student_model_device": "cuda:3",
+    "lr_decay_gamma": 0.9
+  },
+  "common": {
+    "lang": "mandarin",
+    "sampling_rate": 16000
+  }
+}
