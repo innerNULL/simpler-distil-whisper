@@ -66,8 +66,10 @@ conda deactivate
 
 python3 -m venv ./_venv --copies
 source ./bin/activate
-python -m pip install ./
 # deactivate
+
+
+pip install -r ./requirements.txt
 ```
 
 #### Psuedo Labelling
@@ -77,7 +79,7 @@ python ./run_pseudo_labelling.py ./run_pseudo_labelling.json
 
 #### Model Pruning
 ```shell
-python ./create_student_model.py ./create_student_model.json
+python run_student_model_init.py run_student_model_init.json
 ```
 
 #### Model Distillation
