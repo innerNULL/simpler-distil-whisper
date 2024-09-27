@@ -92,7 +92,7 @@ if __name__ == "__main__":
         
         results.append(sample)
 
-    out_file = open(output_path, "w")
+    out_file = open(output_path, "w", encoding='utf-8')
     for sample in results:
         #print(sample)
         out_file.write(json.dumps(sample, ensure_ascii=False) + "\n")
