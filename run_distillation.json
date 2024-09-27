@@ -1,8 +1,8 @@
 {
   "model": {
-    "teacher_model_path_or_name": "openai/whisper-small",
+    "teacher_model_path_or_name": "openai/whisper-base",
     "student_model_path": "_student_whisper",
-    "processor_path_or_name": "openai/whisper-small",
+    "processor_path_or_name": "openai/whisper-base",
     "distil_model_path": "_distil_whisper"
   },
   "data": {

@@ -9,10 +9,10 @@ environments, we can deal this with model distillation technique.
 
 The [paper "Distil-Whisper: Robust Knowledge Distillation via Large-Scale Pseudo Labelling"](
 https://arxiv.org/abs/2311.00430) proposed a robust and straight forward approach to make 
-full-size Whisper become smaller, but unfortunally, the [original implementation](
-https://github.com/huggingface/distil-whisper) has following problems with make it painful 
+full-size Whisper become smaller, but unfortunately, the [original implementation](
+https://github.com/huggingface/distil-whisper) has following problems which make it painful 
 to use in real working:
-* Unnecessarily coupled together with a lot of HuggingFace lib, most of them are not really
+* Unnecessarily coupled together with a lot of HuggingFace libs, most of them are not really
   easy to use, like [datasets](https://github.com/huggingface/datasets), [huggingface_hub](
   https://github.com/huggingface/huggingface_hub).
 * A lot of rarely using logics, like uploading your data, uploading your trained model....
@@ -42,7 +42,7 @@ parameters be much more clear by put all parameter into a JSON configs, so:
 * After each task, the JSON configs will be copied into an output folder with which you can 
   always reproduce your task in future.
 
-The demo configs can be found at `demo_configs/model/whisper_and_distil_whisper`.
+The demo configs can be found at root directory of this project.
 
 #### Data
 All audio datasets are just a JSON lines file.
@@ -66,8 +66,10 @@ conda deactivate
 
 python3 -m venv ./_venv --copies
 source ./bin/activate
-python -m pip install ./
 # deactivate
+
+
+pip install -r ./requirements.txt
 ```
 
 #### Psuedo Labelling
@@ -77,7 +79,7 @@ python ./run_pseudo_labelling.py ./run_pseudo_labelling.json
 
 #### Model Pruning
 ```shell
-python ./create_student_model.py ./create_student_model.json
+python run_student_model_init.py run_student_model_init.json
 ```
 
 #### Model Distillation
