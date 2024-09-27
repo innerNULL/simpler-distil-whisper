@@ -6,7 +6,8 @@
   "device": "cuda:2", 
   "max_sample_size": 100000000,
   "output_path": "pseudo_labeled_dataset.jsonl", 
-  "target_text_col": "text",
+  "groundtruth_text_col": "text",
+  "out_pseudo_text_col": "pseudo_text",
   "metric_col": "cer/wer", 
   "metric_to_use": "cer"
 }
