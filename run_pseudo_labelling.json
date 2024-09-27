@@ -1,6 +1,6 @@
 {
-  "model": "openai/whisper-small",
-  "processor": "openai/whisper-small",
+  "model": "openai/whisper-base",
+  "processor": "openai/whisper-base",
   "data_path": "./demo_data/demo_jsonl_dataset.jsonl",
   "lang": "mandarin", 
   "device": "cuda:2", 

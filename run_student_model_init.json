@@ -1,6 +1,6 @@
 {
-  "teacher_model_name_or_path": "openai/whisper-small",
-  "processor_name_or_path": "openai/whisper-small",
+  "teacher_model_name_or_path": "openai/whisper-base",
+  "processor_name_or_path": "openai/whisper-base",
   "student_model_dir": "./_student_whisper",
   "student_model_encoder_layers": -1, 
   "student_model_decoder_layers": 2
